@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo.ge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-pink.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  </head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Todo.ge</span>
+      </div>
+    </header>
+  
+<main class="mdl-layout__content">
+  <div class="page-content">
+
+<!-- doge popup screen -->
+  	<div class="" id="doge"></div>
+
+    <div class="mdl-grid mdl-grid-center">
+      <div class="mdl-cell--4-col-desktop mdl-cell--12-col-tablet todo-card mdl-card mdl-shadow--2dp mdl-cell">
+    		<div class="todo-item mdl-card--expand">
+    			Type in the field below to start adding items!
+    		</div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="addTodoTextInput" onkeyup="buttonCheck()">
+          <label class="mdl-textfield__label" for="addTodoTextInput">Add An Item</label>
+        </div>
+        <div class="mdl-card__actions mdl-card--border text-center">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" disabled id="addbutton" onclick="handlers.addTodo()"> Add to list </button>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" disabled id="toggleallbutton" onclick="handlers.toggleAll()"> Toggle all </button>
+        </div>
+      </div>
+
+   <div class="mdl-cell--4-col-desktop mdl-cell--12-col-tablet todo-card mdl-card mdl-shadow--2dp mdl-cell">
+      <div class="mdl-card--expand">
+        <h5 id="quote"></h5>
+      </div>
+      <div class="mdl-card__actions mdl-card--border text-center">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="newQuote()"> Get Inspired </button>
+		  </div>
+    </div>
+  </div> <!-- closing top row -->
+
+  <div class="mdl-grid" id="todolist">
+  <!-- dynamically populated content -->
+  </div>
+
+</div>
+</main>
+</div>
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="todo.js"></script>
+<script src="quote.js"></script>
+  </body>
+</html>
